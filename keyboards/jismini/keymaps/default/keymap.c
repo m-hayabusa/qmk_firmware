@@ -25,10 +25,9 @@ enum layer_names {
 };
 
 // Defines the keycodes used by our macros in process_record_user
-//enum custom_keycodes {
-//    QMKBEST = SAFE_RANGE,
-//    QMKURL
-//};
+enum custom_keycodes {
+    tilde = SAFE_RANGE
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
@@ -48,15 +47,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_SLCK,  KC_CAPS,  KC_INS ,  JP_YEN ,  _______,
                   _______,  _______, MO(_FN2),  _______,            _______,  _______,  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END ),
     [_FN2] = LAYOUT(
-        KC_ESC ,  KC_F1  ,  KC_F2  ,  KC_F3  ,  KC_F4  ,  KC_F5  ,  KC_F6  ,  KC_F7  ,  KC_F8  ,  KC_F9  ,  KC_F10 ,  KC_F11 ,  KC_F12 ,  KC_DEL ,
+        tilde  ,  KC_F1  ,  KC_F2  ,  KC_F3  ,  KC_F4  ,  KC_F5  ,  KC_F6  ,  KC_F7  ,  KC_F8  ,  KC_F9  ,  KC_F10 ,  KC_F11 ,  KC_F12 ,  KC_DEL ,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
                   _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______ )
 };
 
-//bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-//    return true;
-//}
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case tilde:
+            if (record->event.pressed) {
+                // when keycode QMKBEST is pressed
+                SEND_STRING(SS_LSFT("="));
+
+            } else {
+                // when keycode QMKBEST is released
+            }
+            break;
+
+        default:
+            break;
+    }
+    return true;
+}
 
 /*
 void matrix_init_user(void) {
