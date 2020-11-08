@@ -15,5 +15,7 @@
  */
 
 #pragma once
+#define MIDI_ADVANCED
+#define MIDI_TONE_KEYCODE_OCTAVES 5
 
 // place overrides here
