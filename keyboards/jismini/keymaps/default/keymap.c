@@ -43,28 +43,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_LALT,  KC_LGUI, MO(_FNL), KC_SPC  ,           MO(_FNR),  KC_PSCR,  KC_RALT,  KC_LEFT,  KC_DOWN,  KC_UP  ,  KC_RGHT ),
     [_FNL] = LAYOUT(
         KC_ESC ,  JP_1   ,  JP_2   ,  JP_3   ,  JP_4   ,  JP_5   ,  JP_6   ,  JP_7   ,  JP_8   ,  JP_9   ,  JP_0   ,  JP_MINS,  JP_CIRC,  KC_DEL ,
-        _______,  _______,  _______,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_UP  ,  KC_RGHT,  _______,  _______,  _______,  KC_RETURN,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_SLCK,  KC_CAPS,  KC_INS ,  JP_YEN ,  _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_RETURN,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  JP_YEN ,  _______,
                   _______,  _______,  _______, MO(_NUM),           MO(_FN2), TO(_MID),  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END ),
     [_FNR] = LAYOUT(
         KC_ESC ,  JP_1   ,  JP_2   ,  JP_3   ,  JP_4   ,  JP_5   ,  JP_6   ,  JP_7   ,  JP_8   ,  JP_9   ,  JP_0   ,  JP_MINS,  JP_CIRC,  KC_DEL ,
-        _______,  _______,  _______,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_UP  ,  KC_RGHT,  _______,  _______,  _______,  KC_RETURN,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_SLCK,  KC_CAPS,  KC_INS ,  JP_YEN ,  _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_RETURN,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  JP_YEN ,  _______,
                   _______,  _______, MO(_FN2), MO(_NUM),            _______, TO(_MID),  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END ),
     [_NUM] = LAYOUT(
-        KC_NLCK,  KC_P7  ,  KC_P8  ,  KC_P9  ,  _______,  _______,  _______,  KC_P7  ,  KC_P8  ,  KC_P9  ,  _______,  _______,  _______,  _______,
-        _______,  KC_P4  ,  KC_P5  ,  KC_P6  ,  _______,  _______,  _______,  KC_P4  ,  KC_P5  ,  KC_P6  ,  _______,  _______,  _______,  KC_PENT,
+        _______,  KC_P7  ,  KC_P8  ,  KC_P9  ,  KC_PMNS,  _______,  KC_NLCK,  KC_P7  ,  KC_P8  ,  KC_P9  ,  KC_PMNS,  KC_SLCK,  KC_INS ,  _______,
+        _______,  KC_P4  ,  KC_P5  ,  KC_P6  ,  KC_PPLS,  _______,  KC_CLCK,  KC_P4  ,  KC_P5  ,  KC_P6  ,  KC_PPLS,  _______,  _______,  KC_PENT,
         _______,  KC_P1  ,  KC_P2  ,  KC_P3  ,  KC_PENT,  _______,  _______,  KC_P1  ,  KC_P2  ,  KC_P3  ,  KC_PENT,  _______,  _______,
                   KC_P0  ,  KC_PDOT,  _______,  _______,            _______,  KC_P0  ,  KC_PDOT,  KC_LEFT,  KC_DOWN,  KC_UP  ,  KC_RGHT ),
     [_FN2] = LAYOUT(
         tilde  ,  KC_F1  ,  KC_F2  ,  KC_F3  ,  KC_F4  ,  KC_F5  ,  KC_F6  ,  KC_F7  ,  KC_F8  ,  KC_F9  ,  KC_F10 ,  KC_F11 ,  KC_F12 ,  KC_DEL ,
-        _______,  _______,  _______,  _______,  _______,  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END ,  _______,  _______,  _______,  _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
                   _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______ ),
     [_MID] = LAYOUT(
         KC_ESC ,  MI_OCTD,  MI_OCTU,  MI_CHD ,  MI_CHU , MI_TRNSD, MI_TRNSU,  MI_VELD,  MI_VELU,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
-        MI_As_2,  MI_KILL,  MI_Cs_3,  MI_Ds_3,  XXXXXXX,  MI_Fs_3,  MI_Gs_3,  MI_As_3,  XXXXXXX,  MI_Cs_4,  MI_Ds_4,  XXXXXXX,  MI_Fs_4,  XXXXXXX,
-        MI_B_2 ,  MI_C_3 ,  MI_D_3 ,  MI_E_3 ,  MI_F_3 ,  MI_G_3 ,  MI_A_3 ,  MI_B_3 ,  MI_C_4 ,  MI_D_4 ,  MI_E_4 ,  MI_F_4 ,  MI_G_4,
+        MI_As_2,  MI_KILL,  MI_Cs_3,  MI_Ds_3,  XXXXXXX,  MI_Fs_3,  MI_Gs_3,  MI_As_3,  XXXXXXX,  MI_Cs_4,  MI_Ds_4,  XXXXXXX,  MI_Fs_4,  KC_ENT ,
+        MI_B_2 ,  MI_C_3 ,  MI_D_3 ,  MI_E_3 ,  MI_F_3 ,  MI_G_3 ,  MI_A_3 ,  MI_B_3 ,  MI_C_4 ,  MI_D_4 ,  MI_E_4 ,  MI_F_4 ,  MI_G_4 ,
                   XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_SPC ,            XXXXXXX,TO(_BASE),  XXXXXXX,  KC_LEFT,  KC_DOWN,  KC_UP  ,  KC_RGHT )
 
 };
