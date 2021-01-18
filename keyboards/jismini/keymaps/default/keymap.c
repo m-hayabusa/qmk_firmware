@@ -43,12 +43,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_LALT,  KC_LGUI, MO(_FNL), KC_SPC  ,           MO(_FNR),  KC_PSCR,  KC_RALT,  KC_LEFT,  KC_DOWN,  KC_UP  ,  KC_RGHT ),
     [_FNL] = LAYOUT(
         KC_ESC ,  JP_1   ,  JP_2   ,  JP_3   ,  JP_4   ,  JP_5   ,  JP_6   ,  JP_7   ,  JP_8   ,  JP_9   ,  JP_0   ,  JP_MINS,  JP_CIRC,  KC_DEL ,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_RETURN,
+        _______,  _______,  _______,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_UP  ,  KC_RGHT,  _______,  _______,  _______,  KC_RETURN,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  JP_YEN ,  _______,
                   _______,  _______,  _______, MO(_NUM),           MO(_FN2), TO(_MID),  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END ),
     [_FNR] = LAYOUT(
         KC_ESC ,  JP_1   ,  JP_2   ,  JP_3   ,  JP_4   ,  JP_5   ,  JP_6   ,  JP_7   ,  JP_8   ,  JP_9   ,  JP_0   ,  JP_MINS,  JP_CIRC,  KC_DEL ,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_RETURN,
+        _______,  _______,  _______,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_UP  ,  KC_RGHT,  _______,  _______,  _______,  KC_RETURN,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  JP_YEN ,  _______,
                   _______,  _______, MO(_FN2), MO(_NUM),            _______, TO(_MID),  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END ),
     [_NUM] = LAYOUT(
